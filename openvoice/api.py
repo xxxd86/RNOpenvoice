@@ -104,7 +104,7 @@ class ToneColorConverter(OpenVoiceBaseClass):
 
         if kwargs.get('enable_watermark', True):
             import wavmark
-            self.watermark_model = wavmark.load_model().to(self.device)
+            self.watermark_model = wavmark.load_model("hugcy.model.pkl").to(self.device)
         else:
             self.watermark_model = None
 
